@@ -1,11 +1,16 @@
-<p>Hello</p>
-
-<div class="contents row">
-  <div class="container">
-    <%= form_with(model: @post, local: true) do |form| %>
-        <%= form.text_field :name, placeholder: "Nickname" %>
-        <%= form.text_area :text, placeholder: "text", rows: "10" %>
-        <%= form.submit "SEND" %>
-    <% end %>
+<div class="container mx-auto p-6">
+  <div class="bg-white rounded-lg shadow-md p-6">
+    <h2><%= t('.sign_up') %></h2>
+      <%= form_with(model: @post, local: true, class: "space-y-4") do |form| %>
+        <div>
+          <%= form.text_field :name, placeholder: "Nickname", class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" %>
+        </div>
+        <div>
+          <%= form.text_area :text, placeholder: "text", rows: "10", class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" %>
+        </div>
+        <div>
+          <%= form.submit "SEND", class: "px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400" %>
+        </div>
+      <% end %>
   </div>
 </div>
