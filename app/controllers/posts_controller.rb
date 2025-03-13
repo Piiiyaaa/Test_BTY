@@ -10,9 +10,9 @@ class PostsController < ApplicationController
     def create
         @post = current_user.posts.build(post_params)
         if @post.save
-            redirect_to posts_path, notice: 'Good posts!'
+            redirect_to posts_path, notice: "Good posts!"
         else
-            flash.now[:alert] = 'try again'
+            flash.now[:alert] = "try again"
             render :new, status: :unprocessable_entity
         end
     end

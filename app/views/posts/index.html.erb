@@ -21,3 +21,5 @@
     <% end %>
   </div>
 </div>
+
+<%= button_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo: false } %>
