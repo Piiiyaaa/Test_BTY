@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   }
   get "home/index"
   root "home#index"
-  resources :posts, only: %i[index new]
+  resources :posts, only: %i[index new create]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
