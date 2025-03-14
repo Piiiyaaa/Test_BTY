@@ -3,8 +3,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: "users/sessions"
   }
-  get "home/index"
-  root "home#index"
+  get 'homes/top'
+  root "home#top"
   resources :posts, only: %i[index new create]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
