@@ -9,11 +9,12 @@
       <div class="col-md-4 mb-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title"><%= post.title %></h5>
+            <h5 class="card-subtitle mb-2 text-muted"><%= post.learning_date.strftime('%Y年%m月%d日') %></h5>
+            <h6 class="card-title">title : <%= post.title %></h6>
             <h6 class="card-subtitle mb-2 text-muted"><%= post.learning_date.strftime('%Y年%m月%d日') %></h6>
-            <p class="card-text"><%= truncate(post.body, length: 100) %></p>
+            <p class="card-text">body : <%= truncate(post.body, length: 100) %></p>
             <div class="d-flex justify-content-between">
-              <small class="text-muted">by <%= post.user.email %></small>
+              <small class="text-muted">by <%= post.user.username %></small>
             </div>
           </div>
         </div>
