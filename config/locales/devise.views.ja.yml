@@ -104,6 +104,7 @@ ja:
       new:
         title: 新規登録
         sign_up: アカウント作成
+        username: ユーザー名
 
       signed_up: アカウント作成が完了しました。
       signed_up_but_inactive: ログインするためには、アカウントを有効化してください。
