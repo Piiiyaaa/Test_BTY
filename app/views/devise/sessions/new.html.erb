@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<h2><%= t('.title') %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -19,8 +19,8 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit t('.sign_in'), class: "bg-sky-500 text-white py-2 px-4 rounded-md shadow hover:bg-sky-600" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+ <%= link_to t('.to_register_page'), new_user_registration_path %>

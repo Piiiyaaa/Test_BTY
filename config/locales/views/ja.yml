@@ -1,0 +1,23 @@
+ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+    label:
+      email: メールアドレス
+      password: パスワード
+
+  devise:
+    sessions:
+      new:
+        title: ログイン
+        sign_in: ログイン
+        to_register_page: 新規登録画面へ
+        password_forget: パスワードをお忘れの方はこちら
+
+    registrations:
+      new:
+        title: 新規登録
+        sign_up: アカウント作成
+        to_login_page: ログインページへ
