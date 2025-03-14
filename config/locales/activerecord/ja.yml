@@ -1,13 +1,4 @@
 ja:
-  activerecord:
-    attributes:
-      user:
-        name: 名前
-        email: Eメール
-        password: パスワード
-        password_confirmation: パスワード（確認用）
-    models:
-      user: ユーザー
       
   date:
     formats:
@@ -18,9 +9,4 @@ ja:
   common:
     submit: "送信"
     cancel: "キャンセル"
- 
-  users:
-    create:
-      success: "ユーザーが正常に作成されました"
-      error: "ユーザーの作成に失敗しました"
 
