@@ -1,0 +1,27 @@
+<header style="background-color: #90DAF9;" class="text-white shadow-md" data-controller="hamburger">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center">
+      <h1 class="text-xl">
+        <%= link_to root_path do %>
+          <%= image_tag "header_logo.png" %>
+        <% end %>
+      </h1>
+    </div>
+
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="relative">
+      <button data-action="click->hamburger#toggleMenu" class="focus:outline-none">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div data-hamburger-target="menu" class="absolute right-0 mt-2 bg-white border rounded shadow-lg p-2 w-32 text-black">
+      <ul>
+        <li class="py-1">りんご</li>
+        <li class="py-1">Orange</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</header>

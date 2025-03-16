@@ -4,3 +4,20 @@
 
 <%= link_to "新規登録", new_user_registration_path %>
 <%= link_to "ログイン", user_session_path %>
+
+<div data-controller="hamburger">
+  <h1>Stimulusテスト</h1>
+  
+  <div class="mb-4">
+    <label for="name" class="block">名前</label>
+    <input id="name" data-hamburger-target="name" type="text" class="border p-2">
+  </div>
+
+  <button data-action="click->hamburger#greet" class="bg-blue-500 text-white px-4 py-2 rounded">
+    挨拶する
+  </button>
+
+  <div class="mt-4">
+    <span data-hamburger-target="output" class="text-lg font-bold"></span>
+  </div>
+  
