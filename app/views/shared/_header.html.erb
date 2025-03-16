@@ -18,8 +18,10 @@
 
       <div data-hamburger-target="menu" class="absolute right-0 mt-2 bg-white border rounded shadow-lg p-2 w-32 text-black">
       <ul>
-        <li class="py-1">りんご</li>
-        <li class="py-1">Orange</li>
+        <li><%= link_to '学びの記録一覧', posts_path %></li>
+        <li><%= link_to '今日の一問に挑戦', posts_path %></li>
+        <li><%= link_to 'マイページ', posts_path %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete } %></li>
       </ul>
     </div>
     </div>
