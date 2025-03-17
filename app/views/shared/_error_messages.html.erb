@@ -7,7 +7,7 @@
         </svg>
       </div>
       <div>
-        <p class="font-bold">以下の<%= resource.errors.count %>件のエラーが発生しました：</p>
+        <p class="font-bold">以下の<%= resource.errors.count %>件のエラーが発生しました</p>
         <ul class="list-disc pl-5">
           <% resource.errors.full_messages.each do |message| %>
             <li><%= message %></li>
