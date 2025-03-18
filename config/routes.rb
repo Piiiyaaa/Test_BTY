@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
   get "homes/top"
   root "home#top"
-  resources :posts, only: %i[index new create]
+  resources :posts, only: %i[index new create show edit]
   resources :daily_questions, only: [ :index, :show ]
 
   resource :profile, only: [ :show, :edit, :update ]
