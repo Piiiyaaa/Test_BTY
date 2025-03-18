@@ -20,7 +20,7 @@
           
           <%= f.fields_for :daily_question do |question_form| %>
             <div class="mb-4">
-              <%= question_form.label :body, "学びの振り返り", class: "block mb-2" %>
+              <%= question_form.label :body, "今日の一問", class: "block mb-2" %>
               <%= question_form.text_area :body, rows: 6, class: "w-full p-2 border rounded", placeholder: "次のうち、正しいのはどれ？\nA)○○\nB)○○\nC)○○" %>
             </div>
           

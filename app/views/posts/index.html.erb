@@ -10,7 +10,7 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-subtitle mb-2 text-muted"><%= post.learning_date.strftime('%Y年%m月%d日') %></h5>
-            <h6 class="card-title">title : <%= post.title %></h6>
+            <%= link_to post.title, post_path(post), class: "text-blue-600 hover:text-blue-800" %>
             <p class="card-text">body : <%= truncate(post.body, length: 100) %></p>
             <div class="d-flex justify-content-between">
               <small class="text-muted">by <%= post.user.username %></small>

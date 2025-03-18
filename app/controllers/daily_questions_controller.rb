@@ -1,6 +1,6 @@
 class DailyQuestionsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @daily_questions = DailyQuestion.includes(post: :user).order(created_at: :desc)
   end
