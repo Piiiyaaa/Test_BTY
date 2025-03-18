@@ -6,6 +6,6 @@ class DailyQuestionsController < ApplicationController
   end
 
   def show
-    @daily_question = DailyQuestion.find(params[:id])
+    @daily_question = DailyQuestion.includes(post: :user).find(params[:id])
   end
 end

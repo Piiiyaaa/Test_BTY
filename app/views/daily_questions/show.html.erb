@@ -18,15 +18,15 @@
     </div>
 
     <div class="mb-6">
-      <h3 class="text-lg font-semibold mb-2">あなたの回答</h3>
+      <h3 class="text-lg font-semibold mb-2">回答</h3>
       <textarea class="w-full p-3 border rounded-md" rows="4" placeholder="ここに回答を入力"></textarea>
     </div>
 
-    <div class="mt-4">
-      <button onclick="toggleAnswer()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    <div data-controller="toggle">
+      <button data-action="click->toggle#toggle" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
         解答を表示
       </button>
-      <div id="answer" class="hidden mt-4 p-4 bg-blue-50 rounded-md">
+      <div data-toggle-target="content" class="hidden mt-4 p-4 bg-blue-50 rounded-md">
         <p><%= @daily_question.question_answer %></p>
       </div>
     </div>
@@ -36,14 +36,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  function toggleAnswer() {
-    const answerElement = document.getElementById('answer');
-    if (answerElement.classList.contains('hidden')) {
-      answerElement.classList.remove('hidden');
-    } else {
-      answerElement.classList.add('hidden');
-    }
-  }
-</script>
