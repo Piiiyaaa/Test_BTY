@@ -13,7 +13,7 @@ class PostsController < ApplicationController
         if @post.save
             redirect_to posts_path, notice: "学びの振り返りが投稿されました!"
         else
-            flash.now[:alert] = "エラーがあります"
+            flash.now[:alert] = @post.errors.full_messages.join(", ")
             render :new, status: :unprocessable_entity
         end
     end
