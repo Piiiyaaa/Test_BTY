@@ -5,14 +5,15 @@ class PostsController < ApplicationController
 
     def new
         @post = Post.new
+        @post.build_daily_question 
     end
 
     def create
         @post = current_user.posts.build(post_params)
         if @post.save
-            redirect_to posts_path, notice: "Good posts!"
+            redirect_to posts_path, notice: "学びの振り返りが投稿されました!"
         else
-            flash.now[:alert] = "try again"
+            flash.now[:alert] = "エラーがあります"
             render :new, status: :unprocessable_entity
         end
     end
@@ -20,6 +21,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:title, :body, :learning_date)
+      params.require(:post).permit(:title, :body, :learning_date,
+      daily_question_attributes: [:body, :question_answer])
     end
 end
