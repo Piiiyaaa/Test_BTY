@@ -14,3 +14,8 @@ ja:
     new:
       title: 学びの振り返り作成
       posting: 投稿する
+
+  profiles:
+    edit:
+      username: ユーザー名
+      bio: 自己紹介
