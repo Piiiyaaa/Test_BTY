@@ -10,11 +10,10 @@ class Post < ApplicationRecord
     validate :image_type_validation
 
     private
-  
+
     def image_type_validation
-      if image.attached? && !image.content_type.in?(%w(image/jpeg image/png image))
-        errors.add(:image, 'はJPEG、PNGでアップロードしてください')
+      if image.attached? && !image.content_type.in?(%w[image/jpeg image/png image])
+        errors.add(:image, "はJPEG、PNGでアップロードしてください")
       end
     end
-
 end
